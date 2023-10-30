@@ -2,6 +2,8 @@ import 'package:app_bar_173/bottom_nav_br.dart';
 import 'package:app_bar_173/tab_exp_page.dart';
 import 'package:flutter/material.dart';
 
+import 'drawer.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -18,7 +20,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: BottomNavPage(),
+      home: DrawerPage(),
     );
   }
 }
@@ -69,7 +71,9 @@ class _HomePageState extends State<HomePage> {
           IconButton(onPressed: () {
 
           }, icon: Icon(Icons.camera_alt_outlined)),
-          IconButton(onPressed: () {}, icon: Icon(Icons.favorite_border_sharp)),
+          IconButton(onPressed: () {
+
+          }, icon: Icon(Icons.favorite_border_sharp)),
           PopupMenuButton(
             initialValue: mInitialValue,
               elevation: 11,
